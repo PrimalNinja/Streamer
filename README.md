@@ -13,7 +13,7 @@ programmers.
 
 Streamer exposes 5 new devices:  AUDIO, PRINT, RTG, SPEECH and TEST. The purpose of these devices are not as per a normal storage device,
 but to send data to various hardware in the same way as is usually done for writing to a file.  For that reason, the devices have virtual
-folders within them for which to write data into files.  The files themselves for now do nothing, they are not even saved, but they are 
+folders within them for which to write data into files.  The files themselves for now do nothing, they are not even saved, but they are
 streamed to the hardware to cause different outcomes.
 
 A summary of the folders within each device is as follows:
