@@ -66,6 +66,7 @@ SAVE "BLAH",B,&4000,&4000 : REM Assuming the sample is loaded already at &4000 *
 Pending Improvements
 
  - Change the filename and device test heirarchies in most functions to lists rather than manual testing of each element.
+ - Modify all streams to have a versioned header for the first few bytes of what is sent.
  
 
 A lot is not finished, can I do anything with it yet?
