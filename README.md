@@ -19,38 +19,34 @@ streamed to the hardware to cause different outcomes.
 A summary of the folders within each device is as follows:
 
 AUDIO:
-	AMDRUM.DAC - AMDRUM *
-	ASIC.DAC - Plus Machine DAC simulation * (Not implemented)
-	AY8912.DAC - all CPC DAC simulation *
-	DIGBLAST.DAC - DigiBlaster *
-	MMACHINE.DAC - RAM Music Machine * **
+	- AMDRUM.DAC - AMDRUM *
+ 	- ASIC.DAC - Plus Machine DAC simulation * (Not implemented)
+	- AY8912.DAC - all CPC DAC simulation *
+	- DIGBLAST.DAC - DigiBlaster *
+	- MMACHINE.DAC - RAM Music Machine * **
 
-		* hardcoded delay that should be user specified, see DAC_DELAY
-		** untested
-	note, all the DACs should be able to play the same sample data. Future functionality will allow for sound fonts to be configured
-	via streams.
+* hardcoded delay that should be user specified, see DAC_DELAY
+** untested
+
+ note, all the DACs should be able to play the same sample data. Future functionality will allow for sound fonts to be configured via streams.
 
 PRINT:
 	7BIT - Standard 7bit Printer Port
 	8BIT - 8bit Printer Port (Not implemented)
 
-	note, all the printers ports should be able to print the same text
-	later printer drivers could be easily added, e.g. epson, citoh (does anyone use them anymore?)
+note, all the printers ports should be able to print the same text later printer drivers could be easily added, e.g. epson, citoh (does anyone use them anymore?)
 
 RTG:
 	CRTC6845.VDP - Standard CRTC6845 (Not implemented)
 	V9990.VDP - V9990 Graphics Card (Not implemented)
 
-	note, goal here is to create a virtual VDP which can handle different protocol-like commands such
-	as sendit sprite data, tile data, CRTC6845 would use extended memory. sprites & tiles will be
-	allocated IDs, there will be protocol commands to move them via attribute memory that is streamed
+note, goal here is to create a virtual VDP which can handle different protocol-like commands such as sendit sprite data, tile data, CRTC6845 would use extended memory. sprites & tiles will be allocated IDs, there will be protocol commands to move them via attribute memory that is streamed
 
 SPEECH:
 	DKTRONIC.RAW - DkTronics Speech Synthesizer (Not implemented)
 	SSA1.RAW - Amstrad SSA1 Speech Synthesizer (Not implemented)
 
-	note, pretty straight forward as they use the same chip, just different ports. RAW takes raw allophone data.
-	it is possible to add additional vocabluary streams that could interpret common words.
+note, pretty straight forward as they use the same chip, just different ports. RAW takes raw allophone data. it is possible to add additional vocabluary streams that could interpret common words.
 
 TEST:
 	TXT2SCRN - Text to Screen
@@ -65,7 +61,7 @@ e.g.
 LOAD "AUDIO:AMDRUM/"
 SAVE "BLAH",B,&4000,&4000 : REM Assuming the sample is loaded already at &4000 *
 
-	* As with the RTGs, future memory buffers can be added to the AUDIO DACs so that they can easily be handled from BASIC also.
+* As with the RTGs, future memory buffers can be added to the AUDIO DACs so that they can easily be handled from BASIC also.
 
 Pending Improvements
 
